@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Place Autocomplete and Directions</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>record</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/record.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Record</h1>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="createRecord">
+                    <h2>Create reccord</h1>
+                        <label for="weight">Please input your weight(/kg)</label>
+                        <input id="weight" type="number" placeholder="Enter an number"><br>
+                        <label for="date">Please choose your running date</label>
+                        <input id="date" type="date"><br>
+                        <label for="start-time-input">Please choose your start time</label>
+                        <input id="start-time-input" type="time"><br>
+                        <label for="end-time-input">Please choose your ending time</label>
+                        <input id="end-time-input" type="time">
+                </div>
+                <div id="map"> </div>
+                <p>Total Distance(/km): <span id="total"></span></p>
+                <p>Total Time(/h): <span id="time"></span></p>
+                <p>Speed(km/h): <span id="speed"></span></p>
+                <p>calorie(/kcal): <span id="kcal"></span></p>
+                <div style="display: none">
+                <input id="origin-input" class="controls" type="text" placeholder="Enter an origin location"><br>
+                <input id="destination-input" class="controls" type="text" placeholder="Enter a destination location">
+            </div>
+                <button id="add_record">Add Record</button>
+				<input type="button" value="Save Route" onClick="save_route()">
+            </div>
+            <div class="col-sm-6">
+                <div class="showRecord">
+                    <h2>Show reccord</h1>
+                        <div class="visualizeData"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/route.js"></script>
+    <script src="js/route.js"></script>
+    <script src="/js/record.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAeWXKaDnm2N6UX-qnR8BVFqzPWC49OWE&libraries=places&callback=initMap"
+        async defer></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+</body>
+
+</html>

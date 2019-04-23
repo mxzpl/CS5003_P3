@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>record</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/js/record.js"></script>
+</head>
+<body>
+    <div class="create-record">
+        <h1>Create A Record</h1>
+        <div id="map">
+
+        </div>
+        <label for="date">Date</label>
+        <input type="text" id="date" name="date" placeholder="enter the date" required>
+        <label for="start_place">Start</label>
+        <input type="text" id="start_place" name="start_place" placeholder="enter the start place" required>
+        <label for="end_place">End</label>
+        <input type="text" id="end_place" name="end_place" placeholder="enter the end place" required>
+        <label for="time">Time</label>
+        <input type="text" id="time" name="time" placeholder="enter the time you used" required>mins
+        <button type="submit" id="add_record">ADD</button>
+    </div>
+    <br><br><br>
+    <div class="show-record">
+            <h1>Records</h1>
+            <table>
+                <tr>
+                    <th>date</th>
+                    <th>start</th>
+                    <th>end</th>
+                    <th>time</th>
+                    <th>distance</th>
+                    <th>speed</th>
+                    <th>calories</th>
+                </tr>
+                <% records.forEach(function(record) { %>
+                    </tr class="record_line">
+                        <td><%= record.date %></td>
+                        <td><%= record.start_place %></td>
+                        <td><%= record.end_place %></td>
+                        <td><%= record.time %> mins</td>
+                        <td><%= record.distance %> km</td>
+                        <td><%= record.speed %> km/h</td>
+                        <td><%= record.calories%> k</td>
+                    </tr>
+                <%})%>
+            </table>
+            <br><br>
+            <div id="total_distance">Total Distance: 3 km</div>
+            <div id="average_speed">Average Speed: 0.5 km/h</div>
+            <div id="total_cycling_time">Total Cycling Time: 3 hours</div>
+        </div>
+</body>
+</html>
